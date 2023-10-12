@@ -1,0 +1,102 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- 1ST CARD MOB START------------------------------------------------------------>
+<div class="card" id="card1">
+    <div class="title">
+        <h3>Husi</h3>
+    </div>
+    <div class="choose has-text-centered">
+        <h4 class="active">Fotó</h4>
+        <h4>Leírás</h4>
+    </div>
+    <div class="result active">
+        <img src="http://via.placeholder.com/240x360" alt="husi">
+    </div>
+    <div class="result">
+        <div class="description">
+            <p>Leírása</p>
+        </div>
+    </div>
+</div>
+<!-- 1ST CARD MOB END -------------------------------------------------------------->
+
+<!-- 2ND CARD MOB START------------------------------------------------------------>
+<div class="card" id="card2">
+    <div class="title">
+        <h3>Cordon Bleu</h3>
+    </div>
+    <div class="choose has-text-centered">
+        <h4 class="active">Fotó</h4>
+        <h4>Leírás</h4>
+    </div>
+    <div class="result active">
+        <img src="img/moblie_img/cordon_bleu._horizontal.jpg" alt="pacalleves">
+    </div>
+    <div class="result">
+        <div class="description">
+            <p>Leírása</p>
+        </div>
+    </div>
+</div>
+<!-- 2ND CARD MOB END -------------------------------------------------------------->
+
+<!-- 3RD CARD MOB START------------------------------------------------------------>
+<div class="card" id="card3">
+    <div class="title">
+        <h3>Erdélyi Csorba</h3>
+    </div>
+    <div class="choose has-text-centered">
+        <h4 class="active">Fotó</h4>
+        <h4>Leírás</h4>
+    </div>
+    <div class="result active">
+        <img src="http://via.placeholder.com/240x360" alt="erdelyi">
+    </div>
+    <div class="result">
+        <div class="description">
+            <p>Leírása</p>
+        </div>
+    </div>
+</div>
+<!-- 3RD CARD MOB END -------------------------------------------------------------->
+
+<!-- 4TH CARD MOB START------------------------------------------------------------>
+<div class="card" id="card4">
+    <div class="title">
+        <h3>Paraszt Csorba</h3>
+    </div>
+    <div class="choose has-text-centered">
+        <h4 class="active">Fotó</h4>
+        <h4>Leírás</h4>
+    </div>
+    <div class="result active">
+        <img src="http://via.placeholder.com/240x360" alt="paraszt">
+    </div>
+    <div class="result">
+        <div class="description">
+            <p>Leírása</p>
+        </div>
+    </div>
+</div>
+<!-- 4TH CARD MOB END -------------------------------------------------------------->
+
+<!-- jQuery kód a h4 elemek interaktivitásához -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var chooseHeaders = document.querySelectorAll(".choose h4");
+        var results = document.querySelectorAll(".result");
+
+        chooseHeaders.forEach(function (header, index) {
+            header.addEventListener("click", function () {
+                chooseHeaders.forEach(function (h) {
+                    h.classList.remove("active");
+                });
+                results.forEach(function (result) {
+                    result.classList.remove("active");
+                });
+                header.classList.add("active");
+                results[index].classList.add("active");
+            });
+        });
+    });
+</script>

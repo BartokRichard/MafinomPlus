@@ -1,0 +1,531 @@
+body {
+    background-color: #242424;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg_img {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%; 
+}
+
+.bg_img img {
+    width: 70vh;
+    display: block;
+    position: relative;
+}
+
+.bg_img .social {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-50%);
+    z-index: 30;
+    padding: 25px 0px;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -3px 10px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    @media(max-width:555px){
+        display: none;
+    }
+}
+
+.bg_img .social .fa{
+    color: #68725D;
+    font-size: 25px;
+}
+
+.bg_img .social a {
+    color:#000;
+    font-size: 25px;
+}
+
+.bg_img .social a + .fa{
+    margin-top: 15px;
+}
+
+.bg_img .social .fa + a{
+    margin-top: 15px;
+}
+
+.container_{
+    display: block;
+    box-sizing: border-box;
+    max-width: 1650px;
+    width: 90%;
+    padding: 50px 110px 130px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+}
+
+header .logo {
+    width: 20%;
+    font-size: 20px;
+    color: #68725D;
+    cursor: pointer;
+    }
+
+header .logo img{
+    width: 20vh;
+}
+
+header ul {
+    display: flex;
+    width: 60%;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+
+header ul li {
+    font-size: 16px;
+    color: #658443;
+    position: relative;
+    cursor: pointer;
+}
+header ul li a{
+    color: #658443;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header ul li + li {
+    margin-left: 50px;
+}
+
+header ul li.active {
+    color: #babbbf;
+}
+
+header ul li a:hover{
+    color: ghostwhite;
+}
+
+header ul li.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 20px;
+    height: 2px;
+    background-color: #babbbf;
+    transform: translateX(-50%);
+}
+
+header .search_nav{
+    display: flex;
+    justify-content: flex-end;
+    color:#000;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+header .search_nav .fa{
+    font-size: 20px;
+}
+
+header .search_nav .fa + .fa{
+    margin-left: 30px;
+}
+
+header .search_nav .fa:hover{
+    color:#68725D;
+}
+
+.background {
+    background-color:#cccc;
+    width: 1550px;
+    text-align:center;
+    height:1500px;
+    line-height:40px;
+    position: absolute;
+    left: 700;
+    top: 30px;
+    transform: rotate(-45deg);
+    position: relative;
+    z-index: 1;
+}
+
+
+/* try------------------------------------------------------------------- */
+.card{
+    box-shadow: none;
+}
+
+#sec{
+    position: absolute;
+    left: 50px;
+    top:50%;
+}
+
+#sec .card{
+    width: 650px;
+    height: 380px;
+    border-radius: 20px;
+    position: relative;
+    top: -130px;
+    left: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; 
+    
+}
+#sec .circle{
+    background-color: #373737;
+    width: 100%;
+    height: 100%;
+    left: 30%;
+    clip-path: circle(110px at center);
+    transform: scale(1.1);
+    position: absolute;
+    transition: all 0.6s;
+}
+
+#sec #food{
+    width: 50%;
+    position: absolute;
+    pointer-events: none;
+    top: 80px;
+    left: 80%;
+    object-fit: contain;
+    transform: translateX(-50%);
+    transition: all 1s;
+}
+
+#sec .card:hover .circle{
+    clip-path: circle(400px at center);
+    transition: 1s;
+    border-radius: 20px;
+}
+
+#sec .card:hover #food{
+    position: absolute;
+    left: 130px;
+    transform: rotate(10deg);
+    transition: all 1s;
+}
+
+#sec .card h2{
+    color:#658443;
+    z-index: 10;
+    position: absolute;
+    top: -20px;    
+    left: 170px;
+    padding-left: 10px;
+    font-size: 48px;
+    opacity: 0  ;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(83, 83, 83, 0.3);
+}
+
+#sec .card:hover h2{
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#sec .card .images{
+    z-index: 10;
+    position: relative;
+    opacity: 0;
+    display: flex;
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+}
+
+
+#sec .card:hover .images{
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#sec div.images div.row {
+    display: flex;
+    flex-flow: row;
+}
+
+#sec div.images img{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 25%;
+    left: 350px;
+    padding: 0 20px 50px 0;
+}
+
+/* secon card----------------------------------------------------------------------------------- */
+
+#fist{
+    position: absolute;
+    left: 50px;
+    top:50%;
+}
+
+#first .card{
+    width: 650px;
+    height: 380px;
+    border-radius: 20px;
+    position: relative;
+    top:70px;
+    left: -220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+}
+#first .circle{
+    background-color: #928e8ecc;
+    width: 100%;
+    height: 100%;
+    left: 30%;
+    clip-path: circle(110px at center);
+    transform: scale(1.1);
+    position: absolute;
+    transition: all 0.6s;
+    z-index: 5;
+}
+
+
+#first #lemonade{
+    width: 50%;
+    position: absolute;
+    pointer-events: none;
+    top: -80px;
+    left: 74%;
+    object-fit: contain;
+    transform: translateX(-50%);
+    transition: all 1s;
+    z-index: 5;
+}
+
+#first .card:hover .circle{
+    clip-path: circle(400px at center);
+    transition: 1s;
+    border-radius: 20px;
+    
+}
+
+#first .card:hover #lemonade{
+    position: absolute;
+    right: 70px;
+    transform: rotate(-10deg);
+    transition: all 1s;
+}
+
+#first .card h2{
+    color:#2d313c;
+    z-index: 10;
+    position: absolute;
+    top: -20px;    
+    left: 170px;
+    padding-left: 10px;
+    font-size: 48px;
+    opacity: 0  ;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(83, 83, 83, 0.3);
+}
+
+#first .card:hover h2{
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#first .card .images{
+    color: #2d313c;
+    z-index: 10;
+    position: relative;
+    font-size: 20px;
+    opacity: 0;
+    display: flex;
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+}
+
+
+#first .card:hover .images{
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#first div.images div.row {
+    display: flex;
+    flex-flow: row;
+}
+
+#first div.images img{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 25%;
+    left: 80px;
+    padding: 0 20px 20px 0;
+}
+
+/* mobile-------------------------- */
+
+.mobile_container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.mobile_container .drinks{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    z-index: 20;
+   
+
+}
+
+.mobile_container .drinks img{
+    height: 350px;
+    border-radius: 7%;
+}
+
+.mobile_container .drinks .content h3{
+    font-size: 20px;
+    color:#babbbf;
+    font-weight: 600;
+}
+
+.mobile_container .drinks .content{
+    display: flex;
+    gap: 90px;
+    position: relative;
+    bottom: 10%;
+    left: 10%;
+}
+
+.mobile_container .drinks .content i{
+    font-size: 30px;
+    color: #babbbf;;
+    position: relative;
+    bottom: 2px;
+}
+
+
+
+.mobile_container .foods{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    z-index: 20;
+}
+
+
+.mobile_container .foods img{
+    height: 350px;
+    border-radius: 7%;
+}
+
+.mobile_container .foods .content h3{
+    font-size: 20px;
+    color:#babbbf;
+    font-weight: 600;
+}
+
+.mobile_container .foods .content{
+    display: flex;
+    gap: 90px;
+    position: relative;
+    bottom: 10%;
+    left: 10%;
+}
+
+.mobile_container .foods .content i{
+    font-size: 30px;
+    color: #babbbf;;
+    position: relative;
+    bottom: 2px;
+}
+
+@media(max-width:1230px){
+    .card_container{
+        display: none;
+    }
+
+    menu {
+        display: flex;
+        align-items: center;
+    }
+
+    menu ul{
+        display: none;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    menu ul li{
+        margin: 10px 0;
+    }
+
+    menu.active ul{
+        display: block;
+    }
+
+    .logo {
+        transform: scale(1.7);
+    }
+}
+
+@media(max-width:555px){
+
+    .mobile_container{
+        margin: 30px;
+        gap:20px;
+        position: relative;
+        bottom: 50px;
+    }
+
+    header{
+        position: relative;
+        left: 100px;
+    }
+
+    header .logo .black_logo{
+        transform: scale(1.5);
+        position: relative;
+        right: 70px;
+        top: 5px
+    }
+
+    header .logo .grey_logo{
+        display: none;
+    }
+}
+
+@media(min-width:1230px){
+    .mobile_container{
+        display: none;
+    }
+}
+
+@media(max-width:2230px) and (min-width: 555px){
+    header .logo .black_logo{
+        display: none;
+    }
+}
