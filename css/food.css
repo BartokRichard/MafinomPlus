@@ -169,10 +169,12 @@ header .search_nav .fa:hover{
     display: none;
     background-color: #000;
     position: absolute;
-    top: -13px;
-    left: 10px;
-    padding: 10px;
+    top: -65px;
+    left: 960px;
+    padding: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    
 }
 
 .dropdown h3{
@@ -189,8 +191,8 @@ header .search_nav .fa:hover{
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 18px;
-
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     user-select: none;
   }
   
@@ -209,6 +211,7 @@ header .search_nav .fa:hover{
     height: 20px;
     width: 20px;
     background-color: #eee;
+    
   }
   
   .cont:hover input ~ .checkmark {
@@ -216,7 +219,8 @@ header .search_nav .fa:hover{
   }
   
   .cont input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #658443;
+    ;
   }
   
   .checkmark:after {
@@ -230,7 +234,7 @@ header .search_nav .fa:hover{
   }
   
   .cont .checkmark:after {
-    left: 9px;
+    left: 8px;
     top: 5px;
     width: 5px;
     height: 10px;
@@ -254,6 +258,13 @@ header .search_nav .fa:hover{
     top: 15px;
 }
 
+.button{
+    height: 32px;
+    background-color: #658443;
+    border-color: #658443; 
+    color: #fff;
+   
+}
 
 
 
@@ -515,8 +526,8 @@ header .search_nav .fa:hover{
 }
 
 .mobile_container .category_title h2{
-    margin-bottom: 50px;
-    font-size: 45px;
+    margin-bottom: 30px;
+    font-size: 40px;
     position: relative;
     right: 125px;
     font-weight: 500;
@@ -526,12 +537,15 @@ header .search_nav .fa:hover{
 .mobile_container .title{
     position: relative;
     right: 50px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .mobile_container .title h3{
     font-weight: 500;
+    width: 220px;
     color:#658443;
+    position: relative;
+    right: 15%;
 }
 
 
@@ -543,7 +557,7 @@ header .search_nav .fa:hover{
     display: flex;
     gap:10px;
     position: relative;
-    right: 50px;
+    right: 35%;
 }
 
 .mobile_container .choose h4{
@@ -551,32 +565,31 @@ header .search_nav .fa:hover{
 }
 
 .mobile_container .box .result img{
-    border-radius: 20px;
+    
+    border-radius: 10px;
     position: relative;
-    top: 60px;
-    right: 20px;
-    margin-bottom: 100px;
-    transform: scale(1.4);
+    top: 90px;
+    right: 35%;
+    margin: 60px 0 207px 0;
+    transform: scale(2.9)
 }
 
 .mobile_container .result .description{
-    width: 230px;
-    height: 340px;
+    width: 272px;
+    height: 408px;
     background-color: #373737;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    right: 50px;
-    top:10px;
-    border-radius: 20px ;   
+    right: 130%;
+    top:17px;
+    border-radius: 30px ;   
 }
 
 .mobile_container .result .description p{
     color: #658443;
 }
-
-
 
 @media(max-width:1230px){
     menu {
@@ -608,9 +621,10 @@ header .search_nav .fa:hover{
         position: relative;
         left: 100px;
     }
+    
 
     header .logo .black_logo{
-        transform: scale(1.5);
+        transform: scale(2);
         position: relative;
         right:80px;
         top: 5px
@@ -624,7 +638,6 @@ header .search_nav .fa:hover{
         position: relative;
         left:10px;
     }
-
     
 }
 
@@ -632,6 +645,7 @@ header .search_nav .fa:hover{
     header .logo .black_logo{
         display: none;
     }
+    
 }
 
 @media(min-width:1230px){
@@ -640,8 +654,107 @@ header .search_nav .fa:hover{
     }
 }
 
-@media(max-width:1230px){
+@media(max-width:1050px){
     .container{
         display: none;
     }
 }
+
+@media(min-width: 555px) and (max-width: 1050px){
+    
+   .mobile_container .title{
+        margin: 200px;
+        bottom: 150px;
+    }
+
+    .mobile_container .box .choose{
+        position: relative;
+        bottom: 70%;
+    }
+
+    .mobile_container .box{
+        width: 200px;
+        height: 500px;
+        margin: 100px 0 0 250px; 
+    }
+
+    .mobile_container .box .result{
+        position: relative;
+        bottom: 40%;
+    }
+
+    .mobile_container .box .result img{
+        margin:  0 0 0;
+    }
+
+    .mobile_container .box .result .description{
+        width: 460px;
+        height: 700px;
+    
+    } 
+}
+
+/* General styling for the card back */
+.card_back {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card_back {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for the nutrition information */
+.nutrition-info p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.nutrition-info p strong {
+    margin-left: 8px;
+    color: #ffffff;
+}
+
+/* Styling for the circles */
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle.calorie { background-color: #8B4513; }
+.circle.fat { background-color: #FF6347; }
+.circle.carbs { background-color: #FFD700; }
+.circle.protein { background-color: #87CEFA; }
+.circle.salt { background-color: #20B2AA; }
+
+/* Styling for the allergens */
+.allergens p {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.allergen {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #666;
+}
+
+.allergen.gluten { background-color: #FFD700; }
+.allergen.lactose { background-color: #87CEFA; }
+.allergen.mustard { background-color: #FFA500; }

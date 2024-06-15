@@ -1,0 +1,829 @@
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='css/food.css'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Varela+Round&display=swap' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scrpit/foods.js" defer></script>
+    <title>Foods</title>
+</head>
+<body>
+    <div class='bg_img'>
+        <div class='background'>
+        </div>
+        <div class='social'>
+            <a href='https://www.facebook.com/mafinom.kucko/' target='_blank'><i class='fa fa-facebook'></a></i>
+            <i class='fa fa-twitter'></i>
+            <a href='https://www.instagram.com/ma.finom/' target='_blank'><i class='fa fa-instagram'></a></i>
+            <i class='fa fa-whatsapp'></i>  
+        </div>
+    </div>
+    <div class='container_'>
+        <header>
+            <div class="logo"><a href="home.html">
+                <img src="img/M+Logo.png" alt="" class="grey_logo">
+                <img src="img/M+logo_black.png" alt="" class="black_logo">      
+            </div></a>
+            <menu>
+                <ul>
+                    <li><a href='home.html'>Főoldal</a></li>
+                    <li class='active'  ><a href='menu.html'>Menü</a></li>
+                    <li><a href='about.html'>Rólunk</a></li>
+                    <li><a href='contact.html'>Elérések</a></li>
+                </ul>
+            </menu>
+            <div class='search_nav'>
+                <i class='fa fa-bars' aria-hidden='true' id ='DropDown'></i>
+            </div>
+        </header>
+
+
+        <div class='container'>
+            <div class="dropdown" id="dropdownMenu">
+                <label class='cont'>Gluténmentes
+                    <input type="checkbox" id="glutenCheckbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class='cont'>Laktózmentes
+                    <input type="checkbox" id="lactoseCheckbox">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <button class ="button "id="okButton">Szűrés</button>
+            </div>
+            <!-- SOUP SECTION START  ---------------------------------------------------------------------------------------->
+            <div class='section' id="soup">
+                <div class='columns'>
+                    <div class='column has-text-centered' style="width: fit-content;">
+                    <h1 class='title' style='color: ghostwhite; position: relative; left:8%;'>Levesek</h1><br>
+                    </div>
+                </div>
+                <!-- 1ST CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+        
+                    <div class='column is-4'>
+                        <div class="flip_card " id="first" >
+                            <div class="flip_card_inner gf lf veg">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Erdélyi csorba</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="img/Husleves.jpg" alt="Husleves" style="border-radius: 5%;">
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <div class="nutrition-info">
+                                        <p><span class="circle calorie"></span><strong>Kalória:</strong> </p>
+                                        <p><span class="circle fat"></span><strong>Zsír:</strong> </p>
+                                        <p><span class="circle carbs"></span><strong>Szénhidrát:</strong></p>
+                                        <p><span class="circle protein"></span><strong>Fehérje:</strong></p>
+                                        <p><span class="circle salt"></span><strong>Só:</strong></p>
+                                    </div>
+                                    <div class="allergens">
+                                        <p><strong>Allergének:</strong></p>
+                                        <p>
+                                            <span class="allergen gluten">Glutén</span>
+                                            <span class="allergen lactose">Laktóz</span>
+                                            <span class="allergen mustard">Mustár</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1ST CARD END ------------------------------------------------------------------------------------------>
+
+                <!-- 2ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4 '>
+                    <div class="flip_card" id="sec">
+                        <div class="flip_card_inner gf">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Zöldségkrém leves</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/zoldseglev.jpg" alt="zoldsegleves" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 3RD CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="third">
+                        <div class="flip_card_inner lf">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Paraszt csorba</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="http://via.placeholder.com/640x420" alt="zoldsegleves" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 4TH CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="fourth">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Pacal leves</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="http://via.placeholder.com/640x420" alt="pacalleves" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4THCARD END ----------------------------------------------------------------------------------------->          
+            </div>
+            <!-- SOUP SECTION END ----------------------------------------------------------------------------------------------->
+
+            <!-- MAIN DISH SECTION START  ---------------------------------------------------------------------------------------->
+            <div class='section' id="main_dish">
+                <div class='columns'>
+                    <div class='column has-text-centered' style="width: fit-content;">
+                    <h1 class='title' style='color: ghostwhite; position: relative; left:8%;'>Főfogások</h1><br>
+                    </div>
+                </div>
+                <!-- 1ST DISH START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="first" >
+                            <div class="flip_card_inner gf">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Cigány Pecsenye</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="img/flekken.jpg" alt="flekken" style="border-radius: 5%;">
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1ST DISH END ------------------------------------------------------------------------------------------>
+
+                <!-- 2ND DISH START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="sec">
+                        <div class="flip_card_inner lf gf">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Cordon Bleu</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/cordon_bleu_mini.jpg" alt="cordon_bleu" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 3RD CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="third">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Fetaval, spenóttal töltött sertésbélszín</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/husi.jpg" alt="husi" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 4TH CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="fourth">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Pisztráng</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/pisztrang.jpg" alt="pisztrang" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4THCARD END ----------------------------------------------------------------------------------------->      
+                
+                <!-- 5TH CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="fifth">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Gombás Sajtos Grillezett Csírke</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/sajtos_husi.jpg" alt="sajtos_husi" style="border-radius: 5%;">                            
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5THCARD END ----------------------------------------------------------------------------------------->   
+
+                <!-- 6TH CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="sixth">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Pisztráng</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="http://via.placeholder.com/640x420" alt="pacalleves" style="border-radius: 5%;">                            
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6THCARD END ----------------------------------------------------------------------------------------->   
+
+                <!-- 6TH CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="seventh">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                    <h3>Pisztráng</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="http://via.placeholder.com/640x420" alt="pacalleves" style="border-radius: 5%;">                            
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6THCARD END ----------------------------------------------------------------------------------------->   
+
+            </div>   
+            <!-- MAIN DISH SECTION END ----------------------------------------------------------------------------------------------->
+
+            <!-- SANDWICH SECTION START  ---------------------------------------------------------------------------------------->
+            <div class='section' id="sandwich">
+                <div class='columns'>
+                    <div class='column has-text-centered' style="width: fit-content;">
+                    <h1 class='title' style='color: ghostwhite; position: relative; left:8%;'>Szendvicsek</h1><br>
+                    </div>
+                </div>
+                <!-- 1ST CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="first_sand" >
+                            <div class="flip_card_inner">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Pulledpork Szendvics</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="img/pulledpork.jpg" alt="pulledpork" style="border-radius: 5%;">
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1ST CARD END ------------------------------------------------------------------------------------------>
+
+                <!-- 2ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="sec_sand">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Mafinom Burger</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/burgir.jpg" alt="burgir" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2ND CARD END ----------------------------------------------------------------------------------------->
+
+            </div>   
+            <!-- SANDWICH SECTION END ----------------------------------------------------------------------------------------------->
+
+            <!-- SALAT SECTION START  ---------------------------------------------------------------------------------------->
+            <div class='section' id="salat">
+                <div class='columns'>
+                    <div class='column has-text-centered' style="width: fit-content;">
+                    <h1 class='title' style='color: ghostwhite; position: relative; left:8%;'>Saláták</h1><br>
+                    </div>
+                </div>
+                <!-- 1ST CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="first" >
+                            <div class="flip_card_inner">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Görög saláta</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="http://via.placeholder.com/640x420" alt="gorogsali" style="border-radius: 5%;">    
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1ST CARD END ------------------------------------------------------------------------------------------>
+
+                <!-- 2ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="sec">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Csirke saláta</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="http://via.placeholder.com/640x420" alt="csirke_sali" style="border-radius: 5%;">    
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 3ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="third">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Mafinom saláta</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/maf_sal.jpg" alt="burgir" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 4ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="fourth">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Saláta</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="http://via.placeholder.com/640x420" alt="valami_sali" style="border-radius: 5%;">    
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3ND CARD END ----------------------------------------------------------------------------------------->
+
+            </div>   
+            <!-- SALAT SECTION END ----------------------------------------------------------------------------------------------->
+
+            <!-- APPETIZER SECTION START  ---------------------------------------------------------------------------------------->
+            <div class='section' id="appet">
+                <div class='columns'>
+                    <div class='column has-text-centered' style="width: fit-content;">
+                    <h1 class='title' style='color: ghostwhite; position: relative; left:8%;'>Előételek</h1><br>
+                    </div>
+                </div>
+                <!-- 1ST CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="first" >
+                            <div class="flip_card_inner">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Kemencében Sült Camambert</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="img/camambert.jpg" alt="camambert" style="border-radius: 5%;">
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1ST CARD END ------------------------------------------------------------------------------------------>
+
+                <!-- 2ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="sec">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" >
+                                <div class='card-title pt-4 has-text-centered' >
+                                    <h3>Szarvasgombás Pástétom</h3>
+                                </div>
+                                <div class="card-image p-4"  >
+                                    <img src="img/pastetom.jpg" alt="pastetom" style="border-radius: 5%; " id="pastetom">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 3RD CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="third">
+                            <div class="flip_card_inner">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Hagyma Kakikák</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="img/hagyma_karika.jpg" alt="valami_laska" style="border-radius: 5%;"> 
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--3RD CARD END ------------------------------------------------------------------------------------------>
+
+            </div>   
+            <!-- APPETIZER SECTION END ----------------------------------------------------------------------------------------------->   
+
+            <!-- PASTA SECTION START  ---------------------------------------------------------------------------------------->
+            <div class='section' id="past">
+                <div class='columns'>
+                    <div class='column has-text-centered' style="width: fit-content;">
+                    <h1 class='title' style='color: ghostwhite; position: relative; left:8%;'>Tészták</h1><br>
+                    </div>
+                </div>
+                <!-- 1ST CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="first" >
+                            <div class="flip_card_inner">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Alfredo Csirkés Penne</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="img/laska.jpg" alt="csikes_penne" style="border-radius: 5%;">
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1ST CARD END ------------------------------------------------------------------------------------------>
+
+                <!-- 2ND CARD START ------------------------------------------------------------------------------------------>
+                <div class='column is-4'>
+                    <div class="flip_card" id="sec">
+                        <div class="flip_card_inner">
+                            <div class='card_front' style="border-radius: 5%;" id="moved">
+                                <div class='card-title pt-4 px-6 has-text-cent id="moved_title"ered'>
+                                    <h3>Bolognai</h3>
+                                </div>
+                                <div class="card-image p-4" >
+                                    <img src="img/bolognai.jpg" alt="burgir" style="border-radius: 5%;">
+                                </div>
+                            </div>
+                            <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                <p>
+                                    Leírás
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2ND CARD END ----------------------------------------------------------------------------------------->
+
+                <!-- 3RD CARD START ------------------------------------------------------------------------------------->
+                <div class='row columns is-multiline is-centered' id='app'>
+                    <div class='column is-4'>
+                        <div class="flip_card" id="third">
+                            <div class="flip_card_inner">
+                                <div class='card_front' style="border-radius: 5%;" id="moved">
+                                    <div class='card-title pt-4 has-text-centered' id="moved_title">
+                                        <h3>Laska</h3>
+                                    </div>
+                                    <div class="card-image p-4" >
+                                        <img src="http://via.placeholder.com/640x420" alt="valami_laska" style="border-radius: 5%;"> 
+                                    </div>
+                                </div>
+                                <div class="card_back has-text-centered" style="border-radius: 5%;">
+                                    <p>
+                                        Leírás
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--3RD CARD END ------------------------------------------------------------------------------------------>
+
+            </div>   
+            <!-- PASTA SECTION END ----------------------------------------------------------------------------------------------->
+        </div>
+<!-- MOBILE VIEW ----------------------------------------------------------------------------------------------------------------------------->
+<div class="mobile_container">
+    <!-- SOUPS MOB START ------------------------------------------------------------------------------>
+    <div class="category_title">
+        <h2>Levesek</h2>
+    </div>
+    <!-- 1ST CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Zöldségkrém Leves</h3>
+    </div>
+    <div class = "box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="img/moblie_img/zoldseg_leves.jpg" alt="zoldseg_leves">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 1ST CARD MOB END -------------------------------------------------------------->
+
+    <!-- 2ND CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Pacal Leves</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="http://via.placeholder.com/240x360" alt="pacalleves">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 2ND CARD MOB END -------------------------------------------------------------->
+
+    <!-- 3RD CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Erdélyi Csorba</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="http://via.placeholder.com/240x360" alt="erdelyi">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 3RD CARD MOB END -------------------------------------------------------------->
+
+    <!-- 4TH CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Paraszt Csorba</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="http://via.placeholder.com/240x360" alt="paraszt">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 4TH CARD MOB END -------------------------------------------------------------->
+
+    <!-- SOUPS MOB END ------------------------------------------------------------------->
+
+    <!-- MAIN MOB START------------------------------------------------------------------------------>
+    <div class="category_title">
+        <h2>Főfogások</h2>
+    </div>
+    <!-- 1ST CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Husi</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="http://via.placeholder.com/240x360" alt="husi">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 1ST CARD MOB END -------------------------------------------------------------->
+
+    <!-- 2ND CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Cordon Bleu</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="img/moblie_img/cordon_bleu._horizontal.jpg" alt="pacalleves">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 2ND CARD MOB END -------------------------------------------------------------->
+
+    <!-- 3RD CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Erdélyi Csorba</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="http://via.placeholder.com/240x360" alt="erdelyi">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 3RD CARD MOB END -------------------------------------------------------------->
+
+    <!-- 4TH CARD MOB START------------------------------------------------------------>
+    <div class="title">
+        <h3>Paraszt Csorba</h3>
+    </div>
+    <div class="box">
+        <div class="choose has-text-centered">
+            <h4 class="active">Fotó</h4>
+            <h4>Leírás</h4>
+        </div>
+        <div class="result active">
+            <img src="http://via.placeholder.com/240x360" alt="paraszt">
+        </div>
+        <div class="result">
+            <div class="description">
+                <p>Leírása</p>
+            </div>
+        </div>
+    </div>
+    <!-- 4TH CARD MOB END -------------------------------------------------------------->
+
+    <!-- MAIN MOB END ------------------------------------------------------------------->
+</div>
+</body>
+</html>

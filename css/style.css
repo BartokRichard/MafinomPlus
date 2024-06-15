@@ -195,7 +195,7 @@ header .search_nav .fa:hover{
     margin: 0;
     padding: 0;
     @media(max-width:555px){
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -205,8 +205,8 @@ header .search_nav .fa:hover{
     margin: 0;
     padding: 0;
     @media(max-width:1200px){
-        font-size: 50px;
-        line-height: 55px;
+        font-size: 45px;
+        line-height: 50 px;
     }
 }
 
@@ -295,7 +295,7 @@ header .search_nav .fa:hover{
     margin-bottom: 5px;
     @media(max-width:555px){
         position: relative;
-        right: 65px;;
+        right: 95px;;
         color: #242424;
         font-weight: 600;
         bottom: 10px;
@@ -347,7 +347,7 @@ header .search_nav .fa:hover{
 
 /* mobile--------------------------- */
 
-@media(max-width:2230px) and (min-width: 555px){
+@media(max-width:2230px) and (min-width: 720px){
     header .logo .black_logo{
         display: none;
     }
@@ -396,17 +396,24 @@ header .search_nav .fa:hover{
     }
 }
 
-@media(max-width: 555px){
+@media(max-width: 720px){
+
+    .social{
+        display: none;
+    }
+    .bg_img img{
+        height: 105%;
+    }
     .conten{
         position: relative;
-        top:110px;
-        right: 85px;;
+        top:80px;
+        right: 95px;;
     }
-
+    
     .content_container .dish_img img{
         position: relative;
         right: 130px;
-        top: 40px
+        top: 3%
     }
      
     header{
@@ -415,9 +422,9 @@ header .search_nav .fa:hover{
     }
 
     header .logo .black_logo{
-        transform: scale(1.5);
+        transform: scale(2);
         position: relative;
-        right: 70px;
+        right: 85px;
     }
 
     header .logo .grey_logo{
@@ -426,20 +433,21 @@ header .search_nav .fa:hover{
 
     .thumb_{
         position: absolute;
-        left: 30px;
+        top: 77%;
+        left: 20px;
         height: 250px;
-        width: 450px;
+        width: 370px;
     }
 
     .thumb_ .item{
         position: relative;
-        bottom: 35px
+        bottom: 35px;
     }
 
     .thumb_ .item_img{
         position: relative;
-        left: 18px;
-        top:30px;
+        right: 8px;
+        top:22px;
     }
 
     .thumb_ .item_img img {

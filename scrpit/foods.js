@@ -32,43 +32,45 @@
 });
 
 $(document).ready(function () {
-    // Checkboxok kiválasztása
     const glutenCheckbox = $("#glutenCheckbox");
     const lactoseCheckbox = $("#lactoseCheckbox");
+    const vegetarianCheckbox = $("#vegetarianCheckbox");
 
-    // Kártyák kiválasztása
     const glutenCards = $(".gf");
     const lactoseCards = $(".lf");
+    const veganCards = $(".veg"); 
 
-    // "OK" gomb kiválasztása
     const okButton = $("#okButton");
 
-    // "OK" gomb lenyomásának kezelése
     okButton.on("click", function () {
-        // Ellenőrizzük a "gluténmentes" és "laktózmentes" checkboxok állapotát
+        // Ellenőrizze, hogy van-e bármelyik checkbox kiválasztva
         const isGlutenChecked = glutenCheckbox.is(":checked");
         const isLactoseChecked = lactoseCheckbox.is(":checked");
+        const isVegetarianChecked = vegetarianCheckbox.is(":checked");
+        
+        // Elrejti az összes kártyát
+        $(".flip_card_inner").hide();
 
-        // Ha mindkét checkbox üres, akkor megjelenítjük az összes kártyát
-        if (!isGlutenChecked && !isLactoseChecked) {
-            $(".flip_card_inner").show();
+        // Választhatja azokat a kártyákat, amelyeknek mindkét osztályuk megvan
+        if (isGlutenChecked && isLactoseChecked) {
+            $(".gf.lf").show();
+        } else if (isGlutenChecked) {
+            glutenCards.show();
+        } else if (isLactoseChecked) {
+            lactoseCards.show();
+        } else if (isVegetarianChecked) {
+            veganCards.show();
+        } else if (isVegetarianChecked && isLactoseChecked) {
+            $(".veg.lf").show();
+        } else if (isVegetarianChecked && isGlutenChecked) {
+            $(".veg.gf").show();
         } else {
-            // Ellenkező esetben elrejtjük az összes kártyát
-            $(".flip_card_inner").hide();
-
-            // Ha mindkét checkbox ki van jelölve, akkor csak azokat jelenítjük meg, amelyek "gf" és "lf" osztállyal rendelkeznek
-            if (isGlutenChecked && isLactoseChecked) {
-                $(".gf.lf").show();
-            }
-            // Ha csak a "gluténmentes" checkbox van kiválasztva, akkor csak az "gf" osztállyal rendelkező elemeket jelenítjük meg
-            else if (isGlutenChecked) {
-                glutenCards.show();
-            }
-            // Ha csak a "laktózmentes" checkbox van kiválasztva, akkor csak az "lf" osztállyal rendelkező elemeket jelenítjük meg
-            else if (isLactoseChecked) {
-                lactoseCards.show();
-            }
+            // Ha nincs checkbox kiválasztva, akkor az összes kártya megjelenik
+            $(".flip_card_inner").show();
         }
     });
 });
+
+
+
 
